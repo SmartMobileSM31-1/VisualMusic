@@ -21,6 +21,8 @@
 		F56FB87419EACC120004F5BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85619EACC110004F5BC /* UIKit.framework */; };
 		F56FB87C19EACC120004F5BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F56FB87A19EACC120004F5BC /* InfoPlist.strings */; };
 		F56FB87E19EACC120004F5BC /* VisualMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB87D19EACC120004F5BC /* VisualMusicTests.m */; };
+		F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88819EFAB2E0004F5BC /* DrawViewController.m */; };
+		F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88B19EFAC220004F5BC /* DrawnItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		F56FB87919EACC120004F5BC /* VisualMusicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualMusicTests-Info.plist"; sourceTree = "<group>"; };
 		F56FB87B19EACC120004F5BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F56FB87D19EACC120004F5BC /* VisualMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualMusicTests.m; sourceTree = "<group>"; };
+		F56FB88719EFAB2E0004F5BC /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawViewController.h; path = ../DrawViewController.h; sourceTree = "<group>"; };
+		F56FB88819EFAB2E0004F5BC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawViewController.m; path = ../DrawViewController.m; sourceTree = "<group>"; };
+		F56FB88A19EFAC220004F5BC /* DrawnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawnItem.h; sourceTree = "<group>"; };
+		F56FB88B19EFAC220004F5BC /* DrawnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawnItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +118,13 @@
 		F56FB85819EACC110004F5BC /* VisualMusic */ = {
 			isa = PBXGroup;
 			children = (
+				F56FB88719EFAB2E0004F5BC /* DrawViewController.h */,
+				F56FB88819EFAB2E0004F5BC /* DrawViewController.m */,
 				F56FB86119EACC110004F5BC /* AppDelegate.h */,
 				F56FB86219EACC110004F5BC /* AppDelegate.m */,
 				F56FB86419EACC110004F5BC /* Main.storyboard */,
+				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
+				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
 				F56FB86719EACC110004F5BC /* ViewController.h */,
 				F56FB86819EACC110004F5BC /* ViewController.m */,
 				F56FB86A19EACC110004F5BC /* Images.xcassets */,
@@ -249,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */,
 				F56FB86919EACC110004F5BC /* ViewController.m in Sources */,
 				F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */,
 				F56FB85F19EACC110004F5BC /* main.m in Sources */,
+				F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
