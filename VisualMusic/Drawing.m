@@ -1,14 +1,13 @@
 //
-//  DrawnItem.h
+//  Drawing.m
 //  VisualMusic
 //
 //  Created by Fhict on 16/10/14.
 //  Copyright (c) 2014 Fhict. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+#import "Drawing.h"
 
-@interface DrawnItem : UIImageView
+@implementation Drawing
 
 @end

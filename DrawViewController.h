@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DrawnItem.h"
 
 @interface DrawViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet DrawnItem *mainDrawnItem;
+@property (strong, nonatomic) IBOutlet DrawnItem *tempDrawnItem;
+
+- (IBAction)changeColor:(UIButton *)sender;
+- (IBAction)erase:(UIButton *)sender;
+
+@property CGPoint lastPoint;
+@property CGFloat redValue;
+@property CGFloat greenValue;
+@property CGFloat blueValue;
+@property CGFloat brushValue;
+@property CGFloat opacityValue;
+@property BOOL mouseSwiped;
+
 
 @end
