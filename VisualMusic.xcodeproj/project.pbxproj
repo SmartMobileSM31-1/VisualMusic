@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52AA61A19FD2B6000010E61 /* SettingsViewController.m */; };
+		F52AA61E19FD308200010E61 /* mainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52AA61D19FD308200010E61 /* mainTabBarController.m */; };
 		F56FB85319EACC110004F5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85219EACC110004F5BC /* Foundation.framework */; };
 		F56FB85519EACC110004F5BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85419EACC110004F5BC /* CoreGraphics.framework */; };
 		F56FB85719EACC110004F5BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85619EACC110004F5BC /* UIKit.framework */; };
@@ -23,7 +25,6 @@
 		F56FB87E19EACC120004F5BC /* VisualMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB87D19EACC120004F5BC /* VisualMusicTests.m */; };
 		F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88819EFAB2E0004F5BC /* DrawViewController.m */; };
 		F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88B19EFAC220004F5BC /* DrawnItem.m */; };
-		F56FB88F19EFB26E0004F5BC /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88E19EFB26E0004F5BC /* Drawing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F52AA61919FD2B6000010E61 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		F52AA61A19FD2B6000010E61 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		F52AA61C19FD308200010E61 /* mainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainTabBarController.h; sourceTree = "<group>"; };
+		F52AA61D19FD308200010E61 /* mainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainTabBarController.m; sourceTree = "<group>"; };
 		F56FB84F19EACC110004F5BC /* VisualMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56FB85219EACC110004F5BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F56FB85419EACC110004F5BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +65,6 @@
 		F56FB88819EFAB2E0004F5BC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawViewController.m; path = ../DrawViewController.m; sourceTree = "<group>"; };
 		F56FB88A19EFAC220004F5BC /* DrawnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawnItem.h; sourceTree = "<group>"; };
 		F56FB88B19EFAC220004F5BC /* DrawnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawnItem.m; sourceTree = "<group>"; };
-		F56FB88D19EFB26E0004F5BC /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
-		F56FB88E19EFB26E0004F5BC /* Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drawing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +124,15 @@
 		F56FB85819EACC110004F5BC /* VisualMusic */ = {
 			isa = PBXGroup;
 			children = (
+				F52AA61919FD2B6000010E61 /* SettingsViewController.h */,
+				F52AA61A19FD2B6000010E61 /* SettingsViewController.m */,
 				F56FB88719EFAB2E0004F5BC /* DrawViewController.h */,
 				F56FB88819EFAB2E0004F5BC /* DrawViewController.m */,
 				F56FB86119EACC110004F5BC /* AppDelegate.h */,
 				F56FB86219EACC110004F5BC /* AppDelegate.m */,
 				F56FB86419EACC110004F5BC /* Main.storyboard */,
-				F56FB88D19EFB26E0004F5BC /* Drawing.h */,
-				F56FB88E19EFB26E0004F5BC /* Drawing.m */,
+				F52AA61C19FD308200010E61 /* mainTabBarController.h */,
+				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
 				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
 				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
 				F56FB86719EACC110004F5BC /* ViewController.h */,
@@ -264,10 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52AA61E19FD308200010E61 /* mainTabBarController.m in Sources */,
 				F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */,
 				F56FB86919EACC110004F5BC /* ViewController.m in Sources */,
-				F56FB88F19EFB26E0004F5BC /* Drawing.m in Sources */,
 				F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */,
+				F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */,
 				F56FB85F19EACC110004F5BC /* main.m in Sources */,
 				F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */,
 			);
@@ -478,6 +484,7 @@
 				F56FB88319EACC120004F5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F56FB88419EACC120004F5BC /* Build configuration list for PBXNativeTarget "VisualMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +493,7 @@
 				F56FB88619EACC120004F5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

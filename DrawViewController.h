@@ -14,7 +14,6 @@
 @property (strong, nonatomic) IBOutlet DrawnItem *mainDrawnItem;
 @property (strong, nonatomic) IBOutlet DrawnItem *tempDrawnItem;
 
-- (IBAction)changeColor:(UIButton *)sender;
 - (IBAction)erase:(UIButton *)sender;
 
 @property CGPoint lastPoint;

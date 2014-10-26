@@ -7,12 +7,14 @@
 //
 
 #import "DrawViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface DrawViewController ()
 
 @end
 
 @implementation DrawViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,17 +27,50 @@
 
 - (void)viewDidLoad
 {
-    self.redValue = 0.0/255.0;
-    self.greenValue = 0.0/255.0;
-    self.blueValue = 0.0/255.0;
-    self.brushValue = 10.0;
-    self.opacityValue = 1.0;
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenWidth = screenSize.width;
+    CGFloat screenHeight = screenSize.height;
     
+    CGRect frame = self.tempDrawnItem.frame;
+    frame.origin.x = 0;
+    frame.origin.y = 0;
+    frame.size = screenSize;
+    
+    self.tempDrawnItem.bounds = screenBound;
+    self.mainDrawnItem.bounds = screenBound;
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
     
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self getValues];
+//    NSLog(@"went through viewWillAppear");
+    [super viewWillAppear:animated];
+}
+
+-(float)getPreferenceValue :(NSString*)key
+{
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    float output = ((NSNumber*)[preferences objectForKey:key]).floatValue;
+    return output;
+}
+
+-(void)getValues
+{
+    self.redValue = [self getPreferenceValue:@"redValue"];
+    self.greenValue = [self getPreferenceValue:@"greenValue"];
+    self.blueValue = [self getPreferenceValue:@"blueValue"];
+    self.brushValue = [self getPreferenceValue:@"brushValue"];
+    self.opacityValue = [self getPreferenceValue:@"opacityValue"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +90,11 @@
 }
 */
 
-- (IBAction)changeColor:(UIButton *)sender {
-    NSLog(@"button: %i", sender.tag);
+- (IBAction)erase:(UIButton *)sender
+{
+    
 }
 
-- (IBAction)erase:(UIButton *)sender {
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
