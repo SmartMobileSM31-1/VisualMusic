@@ -16,43 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaX-ft-DIv" userLabel="mainItem" customClass="DrawnItem">
-                                <rect key="frame" x="0.0" y="0.0" width="254" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaX-ft-DIv" userLabel="mainItem" customClass="DrawnItem">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="mainDrawing"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M62-lH-yX4" userLabel="tempItem" customClass="DrawnItem">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="417"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M62-lH-yX4" userLabel="tempItem" customClass="DrawnItem">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="tempDrawing">
                                     <accessibilityTraits key="traits" none="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-il-mOt">
-                                <rect key="frame" x="248" y="407" width="57" height="30"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-dg-bbU">
+                                <rect key="frame" x="20" y="380" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOV-9F-Zfb">
-                                <rect key="frame" x="248" y="379" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Erase">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <action selector="erase:" destination="u4V-Vv-Id0" eventType="touchUpInside" id="Pm6-TG-Seb"/>
+                                    <action selector="erase:" destination="u4V-Vv-Id0" eventType="valueChanged" id="rIc-Ab-wal"/>
                                 </connections>
-                            </button>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="AVg-MY-XRh"/>
-                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="CsS-op-syn"/>
-                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="O82-yk-yIl"/>
-                            <constraint firstAttribute="width" secondItem="MaX-ft-DIv" secondAttribute="width" id="ZzQ-f0-uiO"/>
-                            <constraint firstAttribute="height" secondItem="MaX-ft-DIv" secondAttribute="height" id="hG2-aB-1NW"/>
+                            <constraint firstAttribute="width" secondItem="MaX-ft-DIv" secondAttribute="width" id="9qC-dv-eot"/>
+                            <constraint firstAttribute="height" secondItem="M62-lH-yX4" secondAttribute="height" id="T4Y-tI-Ucf"/>
+                            <constraint firstItem="Xed-dg-bbU" firstAttribute="leading" secondItem="YPy-5P-2iD" secondAttribute="leading" constant="20" id="g9v-k9-Ixj"/>
+                            <constraint firstAttribute="height" secondItem="MaX-ft-DIv" secondAttribute="height" id="gnR-fU-owc"/>
+                            <constraint firstItem="ebk-eN-0ON" firstAttribute="top" secondItem="Xed-dg-bbU" secondAttribute="bottom" constant="20" id="iAx-nU-GNp"/>
+                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="r2k-z7-hUp"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -60,6 +51,7 @@
                     <keyCommands/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="eraseSwitch" destination="Xed-dg-bbU" id="624-Pz-wBr"/>
                         <outlet property="mainDrawnItem" destination="MaX-ft-DIv" id="d8g-FK-xBp"/>
                         <outlet property="tempDrawnItem" destination="M62-lH-yX4" id="ciI-Go-sbF"/>
                     </connections>

@@ -13,8 +13,9 @@
 
 @property (strong, nonatomic) IBOutlet DrawnItem *mainDrawnItem;
 @property (strong, nonatomic) IBOutlet DrawnItem *tempDrawnItem;
+@property (strong, nonatomic) IBOutlet UISwitch *eraseSwitch;
 
-- (IBAction)erase:(UIButton *)sender;
+- (IBAction)erase:(UISwitch *)sender;
 
 @property CGPoint lastPoint;
 @property CGFloat redValue;

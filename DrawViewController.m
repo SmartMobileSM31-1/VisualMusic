@@ -15,6 +15,8 @@
 
 @implementation DrawViewController
 
+DrawnItem *rotationBuffer;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,25 +29,68 @@
 
 - (void)viewDidLoad
 {
-    
-
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    rotationBuffer = self.mainDrawnItem;
+    UIInterfaceOrientation to = toInterfaceOrientation;
+    UIInterfaceOrientation from = [[UIApplication sharedApplication] statusBarOrientation];
+    CGFloat angle = M_PI;
+    if(UIInterfaceOrientationIsLandscape(to))
+    {
+        if(UIInterfaceOrientationIsLandscape(from))
+        {
+            angle = M_PI;
+        }
+        else if (UIInterfaceOrientationIsPortrait(from))
+        {
+            if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeLeft)
+               || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeRight))
+            {
+                angle = M_PI_2;
+            }
+            else if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeRight) || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeLeft))
+            {
+                angle = M_PI_2 + M_PI_4;
+            }
+        }
+    }
+    if(UIInterfaceOrientationIsPortrait(to))
+    {
+        if(UIInterfaceOrientationIsLandscape(from))
+        {
+            if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeRight)
+               || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeLeft))
+            {
+                angle = M_PI_2 + M_PI_4;
+            }
+            else if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeLeft) || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeRight))
+            {
+                angle = M_PI_2;
+            }
+        }
+        else if (UIInterfaceOrientationIsPortrait(from))
+        {
+            angle = M_PI;
+        }
+    }
+    
+    rotationBuffer.transform = CGAffineTransformMakeRotation(angle);
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    
+    self.mainDrawnItem = rotationBuffer;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    
-    
-//    self.tempDrawnItem.bounds = screenBound;
-//    self.mainDrawnItem.bounds = screenBound;
 
-    [self getValues];
+    [self setBrushColors];
 //    NSLog(@"went through viewWillAppear");
     [super viewWillAppear:animated];
     
@@ -84,9 +129,23 @@
 }
 */
 
-- (IBAction)erase:(UIButton *)sender
+- (IBAction)erase:(UISwitch *)sender
 {
-    
+    [self setBrushColors];
+}
+
+- (void)setBrushColors
+{
+    if(self.eraseSwitch.on)
+    {
+        self.redValue = 255;
+        self.greenValue = 255;
+        self.blueValue = 255;
+    }
+    else
+    {
+        [self getValues];
+    }
 }
 
 
@@ -95,8 +154,7 @@
     
     self.mouseSwiped = NO;
     UITouch *touch = [touches anyObject];
-    self.lastPoint = [touch locationInView:touch.view];
-    NSLog(@"lastpoint: %f, %f", self.lastPoint.x, self.lastPoint.y);
+    self.lastPoint = [touch locationInView:self.view];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -105,9 +163,8 @@
     
     self.mouseSwiped = YES;
     UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:touch.view];
-    NSLog(@"currentpoint: %f, %f", currentPoint.x, currentPoint.y);
-    
+    CGPoint currentPoint = [touch locationInView:self.view];
+    NSLog(@"current point: %f, %f", currentPoint.x, currentPoint.y);
     UIGraphicsBeginImageContext(self.view.frame.size);
     [self.tempDrawnItem.image drawInRect:self.view.frame];
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), self.lastPoint.x, self.lastPoint.y);
@@ -131,7 +188,7 @@
     if(!self.mouseSwiped)
     {
         UIGraphicsBeginImageContext(self.view.frame.size);
-        [self.tempDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [self.tempDrawnItem.image drawInRect:self.view.frame];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.brushValue);
         CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.redValue, self.greenValue, self.blueValue, self.opacityValue);
@@ -144,8 +201,8 @@
     }
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [self.mainDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-    [self.tempDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:self.opacityValue];
+    [self.mainDrawnItem.image drawInRect:self.view.frame blendMode:kCGBlendModeNormal alpha:1.0];
+    [self.tempDrawnItem.image drawInRect:self.view.frame blendMode:kCGBlendModeNormal alpha:self.opacityValue];
     self.mainDrawnItem.image = UIGraphicsGetImageFromCurrentImageContext();
     self.tempDrawnItem.image = nil;
     UIGraphicsEndImageContext();

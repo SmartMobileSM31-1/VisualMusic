@@ -16,7 +16,6 @@
 		F56FB85F19EACC110004F5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB85E19EACC110004F5BC /* main.m */; };
 		F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB86219EACC110004F5BC /* AppDelegate.m */; };
 		F56FB86619EACC110004F5BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56FB86419EACC110004F5BC /* Main.storyboard */; };
-		F56FB86919EACC110004F5BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB86819EACC110004F5BC /* ViewController.m */; };
 		F56FB86B19EACC110004F5BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56FB86A19EACC110004F5BC /* Images.xcassets */; };
 		F56FB87219EACC120004F5BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB87119EACC120004F5BC /* XCTest.framework */; };
 		F56FB87319EACC120004F5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85219EACC110004F5BC /* Foundation.framework */; };
@@ -53,8 +52,6 @@
 		F56FB86119EACC110004F5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F56FB86219EACC110004F5BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F56FB86519EACC110004F5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F56FB86719EACC110004F5BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F56FB86819EACC110004F5BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F56FB86A19EACC110004F5BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F56FB87019EACC120004F5BC /* VisualMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56FB87119EACC120004F5BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,8 +132,6 @@
 				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
 				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
 				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
-				F56FB86719EACC110004F5BC /* ViewController.h */,
-				F56FB86819EACC110004F5BC /* ViewController.m */,
 				F56FB86A19EACC110004F5BC /* Images.xcassets */,
 				F56FB85919EACC110004F5BC /* Supporting Files */,
 			);
@@ -271,7 +266,6 @@
 			files = (
 				F52AA61E19FD308200010E61 /* mainTabBarController.m in Sources */,
 				F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */,
-				F56FB86919EACC110004F5BC /* ViewController.m in Sources */,
 				F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */,
 				F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */,
 				F56FB85F19EACC110004F5BC /* main.m in Sources */,

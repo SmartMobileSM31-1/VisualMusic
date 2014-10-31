@@ -34,30 +34,39 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)setLabelValues
+{
+    self.lblRedValue.text = [NSString stringWithFormat:@"%d", (int)self.redSlider.value];
+    self.lblGreenValue.text = [NSString stringWithFormat:@"%d", (int)self.greenSlider.value];
+    self.lblBlueValue.text = [NSString stringWithFormat:@"%d", (int)self.blueSlider.value];
+    self.lblOpacityValue.text = [NSString stringWithFormat:@"%d", (int)self.opacitySlider.value];
+    self.lblBrushValue.text = [NSString stringWithFormat:@"%d", (int)self.brushSlider.value];
+}
+
 - (IBAction)changeRed:(UISlider *)sender
 {
     [self setPreference:@"redValue" :[NSNumber numberWithFloat:sender.value / 255]];
-    self.lblRedValue.text = [NSString stringWithFormat:@"%f", roundf(sender.value)];
 }
 - (IBAction)changeGreen:(UISlider *)sender
 {
     [self setPreference:@"greenValue" :[NSNumber numberWithFloat:sender.value / 255]];
-    self.lblGreenValue.text = [NSString stringWithFormat:@"%f", roundf(sender.value)];
 }
 - (IBAction)changeBlue:(UISlider *)sender
 {
     [self setPreference:@"blueValue" :[NSNumber numberWithFloat:sender.value / 255]];
-    self.lblBlueValue.text = [NSString stringWithFormat:@"%f", roundf(sender.value)];
 }
 - (IBAction)changeOpacity:(UISlider *)sender
 {
     [self setPreference:@"opacityValue" :[NSNumber numberWithFloat:sender.value]];
-    self.lblOpacityValue.text = [NSString stringWithFormat:@"%f", roundf(sender.value)];
 }
 - (IBAction)changeBrush:(UISlider *)sender
 {
     [self setPreference:@"brushValue" :[NSNumber numberWithFloat:sender.value]];
-    self.lblBrushValue.text = [NSString stringWithFormat:@"%f", sender.value];
 }
 
 - (void)setPreference :(NSString*)key :(NSObject*) value
@@ -65,6 +74,7 @@
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     [preferences setObject:value forKey:key];
     [preferences synchronize];
+    [self setLabelValues];
 }
 
 
