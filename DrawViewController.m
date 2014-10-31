@@ -27,22 +27,10 @@
 
 - (void)viewDidLoad
 {
-    CGRect screenBound = [[UIScreen mainScreen] bounds];
-    CGSize screenSize = screenBound.size;
-    CGFloat screenWidth = screenSize.width;
-    CGFloat screenHeight = screenSize.height;
     
-    CGRect frame = self.tempDrawnItem.frame;
-    frame.origin.x = 0;
-    frame.origin.y = 0;
-    frame.size = screenSize;
-    
-    self.tempDrawnItem.bounds = screenBound;
-    self.mainDrawnItem.bounds = screenBound;
 
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -52,9 +40,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    
+//    self.tempDrawnItem.bounds = screenBound;
+//    self.mainDrawnItem.bounds = screenBound;
+
     [self getValues];
 //    NSLog(@"went through viewWillAppear");
     [super viewWillAppear:animated];
+    
 }
 
 -(float)getPreferenceValue :(NSString*)key
@@ -101,18 +95,21 @@
     
     self.mouseSwiped = NO;
     UITouch *touch = [touches anyObject];
-    self.lastPoint = [touch locationInView:self.view];
+    self.lastPoint = [touch locationInView:touch.view];
+    NSLog(@"lastpoint: %f, %f", self.lastPoint.x, self.lastPoint.y);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+//    CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
     
     self.mouseSwiped = YES;
     UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.view];
+    CGPoint currentPoint = [touch locationInView:touch.view];
+    NSLog(@"currentpoint: %f, %f", currentPoint.x, currentPoint.y);
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [self.tempDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.tempDrawnItem.image drawInRect:self.view.frame];
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), self.lastPoint.x, self.lastPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
@@ -146,7 +143,7 @@
         UIGraphicsEndImageContext();
     }
     
-    UIGraphicsBeginImageContext(self.mainDrawnItem.frame.size);
+    UIGraphicsBeginImageContext(self.view.frame.size);
     [self.mainDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
     [self.tempDrawnItem.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:self.opacityValue];
     self.mainDrawnItem.image = UIGraphicsGetImageFromCurrentImageContext();

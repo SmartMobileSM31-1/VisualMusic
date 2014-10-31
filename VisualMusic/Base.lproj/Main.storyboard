@@ -13,18 +13,20 @@
                         <viewControllerLayoutGuide type="bottom" id="ebk-eN-0ON"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YPy-5P-2iD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaX-ft-DIv" userLabel="mainItem" customClass="DrawnItem">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaX-ft-DIv" userLabel="mainItem" customClass="DrawnItem">
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="mainDrawing"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M62-lH-yX4" userLabel="tempItem" customClass="DrawnItem">
-                                <rect key="frame" x="0.0" y="-3" width="320" height="486"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="417"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="tempDrawing"/>
+                                <accessibility key="accessibilityConfiguration" label="tempDrawing">
+                                    <accessibilityTraits key="traits" none="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-il-mOt">
                                 <rect key="frame" x="248" y="407" width="57" height="30"/>
@@ -46,13 +48,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="M62-lH-yX4" secondAttribute="trailing" id="3rf-mA-e5J"/>
-                            <constraint firstItem="M62-lH-yX4" firstAttribute="top" secondItem="tAm-Vn-SfL" secondAttribute="bottom" constant="-23" id="JXw-SB-2iH"/>
-                            <constraint firstAttribute="trailing" secondItem="M62-lH-yX4" secondAttribute="trailing" id="ab3-JQ-UOS"/>
-                            <constraint firstItem="ebk-eN-0ON" firstAttribute="top" secondItem="M62-lH-yX4" secondAttribute="bottom" constant="-52" id="k3F-cK-hIl"/>
+                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="AVg-MY-XRh"/>
+                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="CsS-op-syn"/>
+                            <constraint firstAttribute="width" secondItem="M62-lH-yX4" secondAttribute="width" id="O82-yk-yIl"/>
+                            <constraint firstAttribute="width" secondItem="MaX-ft-DIv" secondAttribute="width" id="ZzQ-f0-uiO"/>
+                            <constraint firstAttribute="height" secondItem="MaX-ft-DIv" secondAttribute="height" id="hG2-aB-1NW"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Draw" id="Vfu-Nr-5XO"/>
+                    <keyCommands/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mainDrawnItem" destination="MaX-ft-DIv" id="d8g-FK-xBp"/>
