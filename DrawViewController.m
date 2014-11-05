@@ -38,12 +38,12 @@ DrawnItem *rotationBuffer;
     rotationBuffer = self.mainDrawnItem;
     UIInterfaceOrientation to = toInterfaceOrientation;
     UIInterfaceOrientation from = [[UIApplication sharedApplication] statusBarOrientation];
-    CGFloat angle = M_PI;
+    CGFloat angle = 0.0;
     if(UIInterfaceOrientationIsLandscape(to))
     {
         if(UIInterfaceOrientationIsLandscape(from))
         {
-            angle = M_PI;
+            angle = -M_PI;
         }
         else if (UIInterfaceOrientationIsPortrait(from))
         {
@@ -54,7 +54,7 @@ DrawnItem *rotationBuffer;
             }
             else if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeRight) || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeLeft))
             {
-                angle = M_PI_2 + M_PI_4;
+                angle = -M_PI_2;
             }
         }
     }
@@ -65,11 +65,11 @@ DrawnItem *rotationBuffer;
             if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeRight)
                || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeLeft))
             {
-                angle = M_PI_2 + M_PI_4;
+                angle = M_PI_2;
             }
             else if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeLeft) || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeRight))
             {
-                angle = M_PI_2;
+                angle = -M_PI_2;
             }
         }
         else if (UIInterfaceOrientationIsPortrait(from))
@@ -85,6 +85,7 @@ DrawnItem *rotationBuffer;
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     self.mainDrawnItem = rotationBuffer;
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -164,7 +165,7 @@ DrawnItem *rotationBuffer;
     self.mouseSwiped = YES;
     UITouch *touch = [touches anyObject];
     CGPoint currentPoint = [touch locationInView:self.view];
-    NSLog(@"current point: %f, %f", currentPoint.x, currentPoint.y);
+    //NSLog(@"current point: %f, %f", currentPoint.x, currentPoint.y);
     UIGraphicsBeginImageContext(self.view.frame.size);
     [self.tempDrawnItem.image drawInRect:self.view.frame];
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), self.lastPoint.x, self.lastPoint.y);
