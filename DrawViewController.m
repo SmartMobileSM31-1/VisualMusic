@@ -16,7 +16,49 @@
 @implementation DrawViewController
 
 DrawnItem *rotationBuffer;
+- (IBAction)chooseImage:(id)sender {
+    //Imagepicker openen om een afbeelding te kiezen
+    self.imagePicker = [[UIImagePickerController alloc ]init];
+    self.imagePicker.delegate = self;
+    [self.imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [self presentViewController:self.imagePicker animated:YES completion:nil];
+    
+}
 
+//Als er een afbeelding gekozen is
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //Afbeelding weergeven
+    self.chosenImage = info[UIImagePickerControllerOriginalImage];
+    [self.imageView setImage:self.chosenImage];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+//Als afbeelding kiezen is geannuleerd
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)saveImage:(id)sender {
+    UIGraphicsBeginImageContextWithOptions(_mainDrawnItem.bounds.size, NO,0.0);
+    [_mainDrawnItem.image drawInRect:CGRectMake(0, 0, _mainDrawnItem.frame.size.width, _mainDrawnItem.frame.size.height)];
+    UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != NULL)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photoalbum"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

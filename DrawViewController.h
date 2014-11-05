@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "DrawnItem.h"
 
-@interface DrawViewController : UIViewController
-
+@interface DrawViewController : UIViewController< UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    IBOutlet UIButton *chooseImage;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *chosenImage;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet DrawnItem *mainDrawnItem;
 @property (strong, nonatomic) IBOutlet DrawnItem *tempDrawnItem;
 @property (strong, nonatomic) IBOutlet UISwitch *eraseSwitch;

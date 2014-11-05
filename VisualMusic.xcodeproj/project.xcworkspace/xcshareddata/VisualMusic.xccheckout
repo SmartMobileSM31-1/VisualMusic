@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B35BC102-0AA8-4344-82C5-D3B1902929C7</string>
+	<string>E14D0B15-27AF-413B-868B-C6049F9001A4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>VisualMusic</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>52B09D01-57A2-4C0F-A06D-0D3E6B818E63</key>
+		<key>AA3D5593-1E38-4C3C-874A-80B3AEB5B446</key>
 		<string>https://github.com/SmartMobileSM31-1/VisualMusic.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>VisualMusic.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>52B09D01-57A2-4C0F-A06D-0D3E6B818E63</key>
+		<key>AA3D5593-1E38-4C3C-874A-80B3AEB5B446</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>52B09D01-57A2-4C0F-A06D-0D3E6B818E63</string>
+	<string>AA3D5593-1E38-4C3C-874A-80B3AEB5B446</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>52B09D01-57A2-4C0F-A06D-0D3E6B818E63</string>
+			<string>AA3D5593-1E38-4C3C-874A-80B3AEB5B446</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VisualMusic</string>
 		</dict>

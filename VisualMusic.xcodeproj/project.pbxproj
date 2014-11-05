@@ -24,6 +24,14 @@
 		F56FB87E19EACC120004F5BC /* VisualMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB87D19EACC120004F5BC /* VisualMusicTests.m */; };
 		F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88819EFAB2E0004F5BC /* DrawViewController.m */; };
 		F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88B19EFAC220004F5BC /* DrawnItem.m */; };
+		F57047CB1A0A247C0007883D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57047CA1A0A247C0007883D /* PlayViewController.m */; };
+		F57047D21A0A26EA0007883D /* Sound0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CC1A0A26EA0007883D /* Sound0.wav */; };
+		F57047D31A0A26EA0007883D /* Sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CD1A0A26EA0007883D /* Sound1.wav */; };
+		F57047D41A0A26EA0007883D /* Sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CE1A0A26EA0007883D /* Sound2.wav */; };
+		F57047D51A0A26EA0007883D /* Sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CF1A0A26EA0007883D /* Sound3.wav */; };
+		F57047D61A0A26EA0007883D /* Sound4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D01A0A26EA0007883D /* Sound4.wav */; };
+		F57047D71A0A26EA0007883D /* Sound5.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D11A0A26EA0007883D /* Sound5.wav */; };
+		F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57047D81A0A278C0007883D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +70,15 @@
 		F56FB88819EFAB2E0004F5BC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawViewController.m; path = ../DrawViewController.m; sourceTree = "<group>"; };
 		F56FB88A19EFAC220004F5BC /* DrawnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawnItem.h; sourceTree = "<group>"; };
 		F56FB88B19EFAC220004F5BC /* DrawnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawnItem.m; sourceTree = "<group>"; };
+		F57047C91A0A247C0007883D /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		F57047CA1A0A247C0007883D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		F57047CC1A0A26EA0007883D /* Sound0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound0.wav; sourceTree = "<group>"; };
+		F57047CD1A0A26EA0007883D /* Sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound1.wav; sourceTree = "<group>"; };
+		F57047CE1A0A26EA0007883D /* Sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound2.wav; sourceTree = "<group>"; };
+		F57047CF1A0A26EA0007883D /* Sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound3.wav; sourceTree = "<group>"; };
+		F57047D01A0A26EA0007883D /* Sound4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound4.wav; sourceTree = "<group>"; };
+		F57047D11A0A26EA0007883D /* Sound5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound5.wav; sourceTree = "<group>"; };
+		F57047D81A0A278C0007883D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */,
 				F56FB85519EACC110004F5BC /* CoreGraphics.framework in Frameworks */,
 				F56FB85719EACC110004F5BC /* UIKit.framework in Frameworks */,
 				F56FB85319EACC110004F5BC /* Foundation.framework in Frameworks */,
@@ -110,6 +128,7 @@
 		F56FB85119EACC110004F5BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F57047D81A0A278C0007883D /* AudioToolbox.framework */,
 				F56FB85219EACC110004F5BC /* Foundation.framework */,
 				F56FB85419EACC110004F5BC /* CoreGraphics.framework */,
 				F56FB85619EACC110004F5BC /* UIKit.framework */,
@@ -132,6 +151,8 @@
 				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
 				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
 				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
+				F57047C91A0A247C0007883D /* PlayViewController.h */,
+				F57047CA1A0A247C0007883D /* PlayViewController.m */,
 				F56FB86A19EACC110004F5BC /* Images.xcassets */,
 				F56FB85919EACC110004F5BC /* Supporting Files */,
 			);
@@ -141,6 +162,12 @@
 		F56FB85919EACC110004F5BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F57047CC1A0A26EA0007883D /* Sound0.wav */,
+				F57047CD1A0A26EA0007883D /* Sound1.wav */,
+				F57047CE1A0A26EA0007883D /* Sound2.wav */,
+				F57047CF1A0A26EA0007883D /* Sound3.wav */,
+				F57047D01A0A26EA0007883D /* Sound4.wav */,
+				F57047D11A0A26EA0007883D /* Sound5.wav */,
 				F56FB85A19EACC110004F5BC /* VisualMusic-Info.plist */,
 				F56FB85B19EACC110004F5BC /* InfoPlist.strings */,
 				F56FB85E19EACC110004F5BC /* main.m */,
@@ -246,6 +273,12 @@
 				F56FB86B19EACC110004F5BC /* Images.xcassets in Resources */,
 				F56FB85D19EACC110004F5BC /* InfoPlist.strings in Resources */,
 				F56FB86619EACC110004F5BC /* Main.storyboard in Resources */,
+				F57047D71A0A26EA0007883D /* Sound5.wav in Resources */,
+				F57047D61A0A26EA0007883D /* Sound4.wav in Resources */,
+				F57047D41A0A26EA0007883D /* Sound2.wav in Resources */,
+				F57047D31A0A26EA0007883D /* Sound1.wav in Resources */,
+				F57047D51A0A26EA0007883D /* Sound3.wav in Resources */,
+				F57047D21A0A26EA0007883D /* Sound0.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +303,7 @@
 				F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */,
 				F56FB85F19EACC110004F5BC /* main.m in Sources */,
 				F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */,
+				F57047CB1A0A247C0007883D /* PlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
