@@ -123,6 +123,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F53FEC261A0A7D67005D9F84 /* domain classes */ = {
+			isa = PBXGroup;
+			children = (
+				F56FB86119EACC110004F5BC /* AppDelegate.h */,
+				F56FB86219EACC110004F5BC /* AppDelegate.m */,
+				F53FEC231A0A75D6005D9F84 /* PreferenceHandler.h */,
+				F53FEC241A0A75D6005D9F84 /* PreferenceHandler.m */,
+				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
+				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
+			);
+			name = "domain classes";
+			sourceTree = "<group>";
+		};
+		F53FEC271A0A7D7E005D9F84 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F52AA61919FD2B6000010E61 /* SettingsViewController.h */,
+				F52AA61A19FD2B6000010E61 /* SettingsViewController.m */,
+				F56FB88719EFAB2E0004F5BC /* DrawViewController.h */,
+				F56FB88819EFAB2E0004F5BC /* DrawViewController.m */,
+				F52AA61C19FD308200010E61 /* mainTabBarController.h */,
+				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
+				F57047C91A0A247C0007883D /* PlayViewController.h */,
+				F57047CA1A0A247C0007883D /* PlayViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		F56FB84619EACC110004F5BC = {
 			isa = PBXGroup;
 			children = (
@@ -159,21 +187,9 @@
 		F56FB85819EACC110004F5BC /* VisualMusic */ = {
 			isa = PBXGroup;
 			children = (
-				F52AA61919FD2B6000010E61 /* SettingsViewController.h */,
-				F52AA61A19FD2B6000010E61 /* SettingsViewController.m */,
-				F56FB88719EFAB2E0004F5BC /* DrawViewController.h */,
-				F56FB88819EFAB2E0004F5BC /* DrawViewController.m */,
-				F56FB86119EACC110004F5BC /* AppDelegate.h */,
-				F56FB86219EACC110004F5BC /* AppDelegate.m */,
+				F53FEC271A0A7D7E005D9F84 /* View Controllers */,
+				F53FEC261A0A7D67005D9F84 /* domain classes */,
 				F56FB86419EACC110004F5BC /* Main.storyboard */,
-				F52AA61C19FD308200010E61 /* mainTabBarController.h */,
-				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
-				F53FEC231A0A75D6005D9F84 /* PreferenceHandler.h */,
-				F53FEC241A0A75D6005D9F84 /* PreferenceHandler.m */,
-				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
-				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
-				F57047C91A0A247C0007883D /* PlayViewController.h */,
-				F57047CA1A0A247C0007883D /* PlayViewController.m */,
 				F56FB86A19EACC110004F5BC /* Images.xcassets */,
 				F56FB85919EACC110004F5BC /* Supporting Files */,
 			);
