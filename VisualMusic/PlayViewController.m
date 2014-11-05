@@ -38,7 +38,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     NSLog(@"image filepath :%@",imagePath);
     NSLog(@"image filepath :%@",self.chosenImage.accessibilityIdentifier);
     
-    [self changeImageTitle:@"Gekozen afbeelding:"];
+    [self changeImageTitle:@"Now Playing:"];
     
 }
 

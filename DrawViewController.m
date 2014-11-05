@@ -41,6 +41,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
 - (IBAction)saveImage:(id)sender {
     UIGraphicsBeginImageContextWithOptions(_mainDrawnItem.bounds.size, NO,0.0);
     [_mainDrawnItem.image drawInRect:CGRectMake(0, 0, _mainDrawnItem.frame.size.width, _mainDrawnItem.frame.size.height)];
@@ -48,6 +49,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
+
+
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
     if (error != NULL)
@@ -75,6 +78,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     // Do any additional setup after loading the view.
 }
 
+
+// effectively deprecated, as the app does not rotate
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     rotationBuffer = self.mainDrawnItem;
@@ -172,6 +177,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)clearScreen:(UIButton *)sender
+{
+    self.mainDrawnItem.image = nil;
+}
 
 - (IBAction)erase:(UISwitch *)sender
 {
