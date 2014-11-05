@@ -296,7 +296,6 @@
                                 </state>
                                 <connections>
                                     <action selector="playSound:" destination="T9u-SN-UzW" eventType="touchUpInside" id="ZBG-K6-u08"/>
-                                    <action selector="showChoose" destination="T9u-SN-UzW" eventType="touchUpInside" id="hHt-cD-c7t"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qea-m8-3h4">
