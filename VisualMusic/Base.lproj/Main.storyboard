@@ -31,6 +31,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-dg-bbU">
                                 <rect key="frame" x="20" y="386" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="">
+                                    <accessibilityTraits key="traits" none="YES" button="YES"/>
+                                </accessibility>
                                 <connections>
                                     <action selector="erase:" destination="u4V-Vv-Id0" eventType="valueChanged" id="rIc-Ab-wal"/>
                                 </connections>
@@ -55,6 +58,13 @@
                                     <action selector="chooseImage:" destination="u4V-Vv-Id0" eventType="touchUpInside" id="bQH-bs-60J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbU-hl-Jtw">
+                                <rect key="frame" x="25" y="357" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -70,6 +80,7 @@
                     <tabBarItem key="tabBarItem" title="Draw" id="Vfu-Nr-5XO"/>
                     <keyCommands/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="eraseSwitch" destination="Xed-dg-bbU" id="624-Pz-wBr"/>
                         <outlet property="imageView" destination="M62-lH-yX4" id="rAh-f7-lpI"/>
@@ -197,6 +208,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="eeQ-NO-5oQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="blueSlider" destination="dbp-Ij-Ikw" id="HNR-A8-ItG"/>
                         <outlet property="brushSlider" destination="bRT-fn-wr8" id="hch-CX-ERf"/>
@@ -283,6 +295,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="eXj-gm-rKS"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="chooseImage" destination="b3E-if-a8A" id="BHL-xq-Ye2"/>
                         <outlet property="imageView" destination="qea-m8-3h4" id="fMI-Fq-crA"/>
