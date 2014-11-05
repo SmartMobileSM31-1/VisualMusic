@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @interface SettingsViewController ()
 
@@ -25,17 +26,68 @@
 
 - (void)viewDidLoad
 {
-    [self setPreference:@"redValue" :[NSNumber numberWithFloat:0 / 255]];
-    [self setPreference:@"blueValue" :[NSNumber numberWithFloat:0 / 255]];
-    [self setPreference:@"greenValue" :[NSNumber numberWithFloat:0 / 255]];
-    [self setPreference:@"brushValue" :[NSNumber numberWithFloat:10]];
-    [self setPreference:@"opacityValue" :[NSNumber numberWithFloat:1]];
+//    [self setPreference:@"redValue" :[NSNumber numberWithFloat:0 / 255]];
+//    [self setPreference:@"blueValue" :[NSNumber numberWithFloat:0 / 255]];
+//    [self setPreference:@"greenValue" :[NSNumber numberWithFloat:0 / 255]];
+//    [self setPreference:@"brushValue" :[NSNumber numberWithFloat:10]];
+//    [self setPreference:@"opacityValue" :[NSNumber numberWithFloat:1]];
+    [self loadJsonData];
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+}
+
+// LOAD
+-(void) loadJsonData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"application/x-javascript"];
+    
+    [manager GET:@"http://athena.fhict.nl/users/i293443/colors.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         //NSLog(@"JSON: %@", responseObject);
+         [self parseJSONData:responseObject];
+     }
+     
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"Error, %@", error);
+     }];
+}
+
+// PARSE
+-(void) parseJSONData:(id)JSON
+{
+    for(NSDictionary* dict in JSON)
+    {
+        NSNumber *redV = ((NSNumber*)[dict objectForKey:@"redValue"]);
+        NSNumber *blueV = ((NSNumber*)[dict objectForKey:@"blueValue"]);
+        NSNumber *greenV = ((NSNumber*)[dict objectForKey:@"greenValue"]);
+        NSNumber *brushV = ((NSNumber*)[dict objectForKey:@"brushValue"]);
+        NSNumber *opacityV = ((NSNumber*)[dict objectForKey:@"opacityValue"]);
+        
+        
+        self.redSlider.value = redV.floatValue;
+        self.blueSlider.value = blueV.floatValue;
+        self.greenSlider.value = greenV.floatValue;
+        self.brushSlider.value = brushV.floatValue;
+        self.opacitySlider.value = opacityV.floatValue;
+        [self setLabelValues];
+        
+        NSLog(@"brush value from json: %f", ((NSNumber*)[dict objectForKey:@"brushValue"]).floatValue);
+        
+        [self setPreference:@"redValue" : redV];
+        [self setPreference:@"blueValue" : blueV];
+        [self setPreference:@"greenValue" : greenV];
+        [self setPreference:@"brushValue" : brushV];
+        [self setPreference:@"opacityValue" : opacityV];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
     [super viewWillAppear:animated];
 }
 

@@ -153,6 +153,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     self.blueValue = [self getPreferenceValue:@"blueValue"];
     self.brushValue = [self getPreferenceValue:@"brushValue"];
     self.opacityValue = [self getPreferenceValue:@"opacityValue"];
+    NSLog(@"brushvalue drawview: %f", self.brushValue);
 }
 
 - (void)didReceiveMemoryWarning

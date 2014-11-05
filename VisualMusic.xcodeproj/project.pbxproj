@@ -1,529 +1,1413 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52AA61A19FD2B6000010E61 /* SettingsViewController.m */; };
-		F52AA61E19FD308200010E61 /* mainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52AA61D19FD308200010E61 /* mainTabBarController.m */; };
-		F56FB85319EACC110004F5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85219EACC110004F5BC /* Foundation.framework */; };
-		F56FB85519EACC110004F5BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85419EACC110004F5BC /* CoreGraphics.framework */; };
-		F56FB85719EACC110004F5BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85619EACC110004F5BC /* UIKit.framework */; };
-		F56FB85D19EACC110004F5BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F56FB85B19EACC110004F5BC /* InfoPlist.strings */; };
-		F56FB85F19EACC110004F5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB85E19EACC110004F5BC /* main.m */; };
-		F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB86219EACC110004F5BC /* AppDelegate.m */; };
-		F56FB86619EACC110004F5BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56FB86419EACC110004F5BC /* Main.storyboard */; };
-		F56FB86B19EACC110004F5BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56FB86A19EACC110004F5BC /* Images.xcassets */; };
-		F56FB87219EACC120004F5BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB87119EACC120004F5BC /* XCTest.framework */; };
-		F56FB87319EACC120004F5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85219EACC110004F5BC /* Foundation.framework */; };
-		F56FB87419EACC120004F5BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FB85619EACC110004F5BC /* UIKit.framework */; };
-		F56FB87C19EACC120004F5BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F56FB87A19EACC120004F5BC /* InfoPlist.strings */; };
-		F56FB87E19EACC120004F5BC /* VisualMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB87D19EACC120004F5BC /* VisualMusicTests.m */; };
-		F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88819EFAB2E0004F5BC /* DrawViewController.m */; };
-		F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88B19EFAC220004F5BC /* DrawnItem.m */; };
-		F57047CB1A0A247C0007883D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57047CA1A0A247C0007883D /* PlayViewController.m */; };
-		F57047D21A0A26EA0007883D /* Sound0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CC1A0A26EA0007883D /* Sound0.wav */; };
-		F57047D31A0A26EA0007883D /* Sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CD1A0A26EA0007883D /* Sound1.wav */; };
-		F57047D41A0A26EA0007883D /* Sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CE1A0A26EA0007883D /* Sound2.wav */; };
-		F57047D51A0A26EA0007883D /* Sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CF1A0A26EA0007883D /* Sound3.wav */; };
-		F57047D61A0A26EA0007883D /* Sound4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D01A0A26EA0007883D /* Sound4.wav */; };
-		F57047D71A0A26EA0007883D /* Sound5.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D11A0A26EA0007883D /* Sound5.wav */; };
-		F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57047D81A0A278C0007883D /* AudioToolbox.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F56FB87519EACC120004F5BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F56FB84719EACC110004F5BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F56FB84E19EACC110004F5BC;
-			remoteInfo = VisualMusic;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		F52AA61919FD2B6000010E61 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		F52AA61A19FD2B6000010E61 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		F52AA61C19FD308200010E61 /* mainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainTabBarController.h; sourceTree = "<group>"; };
-		F52AA61D19FD308200010E61 /* mainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainTabBarController.m; sourceTree = "<group>"; };
-		F56FB84F19EACC110004F5BC /* VisualMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F56FB85219EACC110004F5BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F56FB85419EACC110004F5BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F56FB85619EACC110004F5BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F56FB85A19EACC110004F5BC /* VisualMusic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualMusic-Info.plist"; sourceTree = "<group>"; };
-		F56FB85C19EACC110004F5BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F56FB85E19EACC110004F5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F56FB86019EACC110004F5BC /* VisualMusic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VisualMusic-Prefix.pch"; sourceTree = "<group>"; };
-		F56FB86119EACC110004F5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F56FB86219EACC110004F5BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F56FB86519EACC110004F5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F56FB86A19EACC110004F5BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F56FB87019EACC120004F5BC /* VisualMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F56FB87119EACC120004F5BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F56FB87919EACC120004F5BC /* VisualMusicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualMusicTests-Info.plist"; sourceTree = "<group>"; };
-		F56FB87B19EACC120004F5BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F56FB87D19EACC120004F5BC /* VisualMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualMusicTests.m; sourceTree = "<group>"; };
-		F56FB88719EFAB2E0004F5BC /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawViewController.h; path = ../DrawViewController.h; sourceTree = "<group>"; };
-		F56FB88819EFAB2E0004F5BC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawViewController.m; path = ../DrawViewController.m; sourceTree = "<group>"; };
-		F56FB88A19EFAC220004F5BC /* DrawnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawnItem.h; sourceTree = "<group>"; };
-		F56FB88B19EFAC220004F5BC /* DrawnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawnItem.m; sourceTree = "<group>"; };
-		F57047C91A0A247C0007883D /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
-		F57047CA1A0A247C0007883D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		F57047CC1A0A26EA0007883D /* Sound0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound0.wav; sourceTree = "<group>"; };
-		F57047CD1A0A26EA0007883D /* Sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound1.wav; sourceTree = "<group>"; };
-		F57047CE1A0A26EA0007883D /* Sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound2.wav; sourceTree = "<group>"; };
-		F57047CF1A0A26EA0007883D /* Sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound3.wav; sourceTree = "<group>"; };
-		F57047D01A0A26EA0007883D /* Sound4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound4.wav; sourceTree = "<group>"; };
-		F57047D11A0A26EA0007883D /* Sound5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound5.wav; sourceTree = "<group>"; };
-		F57047D81A0A278C0007883D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		F56FB84C19EACC110004F5BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */,
-				F56FB85519EACC110004F5BC /* CoreGraphics.framework in Frameworks */,
-				F56FB85719EACC110004F5BC /* UIKit.framework in Frameworks */,
-				F56FB85319EACC110004F5BC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F56FB86D19EACC120004F5BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F56FB87219EACC120004F5BC /* XCTest.framework in Frameworks */,
-				F56FB87419EACC120004F5BC /* UIKit.framework in Frameworks */,
-				F56FB87319EACC120004F5BC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		F56FB84619EACC110004F5BC = {
-			isa = PBXGroup;
-			children = (
-				F56FB85819EACC110004F5BC /* VisualMusic */,
-				F56FB87719EACC120004F5BC /* VisualMusicTests */,
-				F56FB85119EACC110004F5BC /* Frameworks */,
-				F56FB85019EACC110004F5BC /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		F56FB85019EACC110004F5BC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F56FB84F19EACC110004F5BC /* VisualMusic.app */,
-				F56FB87019EACC120004F5BC /* VisualMusicTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F56FB85119EACC110004F5BC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F57047D81A0A278C0007883D /* AudioToolbox.framework */,
-				F56FB85219EACC110004F5BC /* Foundation.framework */,
-				F56FB85419EACC110004F5BC /* CoreGraphics.framework */,
-				F56FB85619EACC110004F5BC /* UIKit.framework */,
-				F56FB87119EACC120004F5BC /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F56FB85819EACC110004F5BC /* VisualMusic */ = {
-			isa = PBXGroup;
-			children = (
-				F52AA61919FD2B6000010E61 /* SettingsViewController.h */,
-				F52AA61A19FD2B6000010E61 /* SettingsViewController.m */,
-				F56FB88719EFAB2E0004F5BC /* DrawViewController.h */,
-				F56FB88819EFAB2E0004F5BC /* DrawViewController.m */,
-				F56FB86119EACC110004F5BC /* AppDelegate.h */,
-				F56FB86219EACC110004F5BC /* AppDelegate.m */,
-				F56FB86419EACC110004F5BC /* Main.storyboard */,
-				F52AA61C19FD308200010E61 /* mainTabBarController.h */,
-				F52AA61D19FD308200010E61 /* mainTabBarController.m */,
-				F56FB88A19EFAC220004F5BC /* DrawnItem.h */,
-				F56FB88B19EFAC220004F5BC /* DrawnItem.m */,
-				F57047C91A0A247C0007883D /* PlayViewController.h */,
-				F57047CA1A0A247C0007883D /* PlayViewController.m */,
-				F56FB86A19EACC110004F5BC /* Images.xcassets */,
-				F56FB85919EACC110004F5BC /* Supporting Files */,
-			);
-			path = VisualMusic;
-			sourceTree = "<group>";
-		};
-		F56FB85919EACC110004F5BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F57047CC1A0A26EA0007883D /* Sound0.wav */,
-				F57047CD1A0A26EA0007883D /* Sound1.wav */,
-				F57047CE1A0A26EA0007883D /* Sound2.wav */,
-				F57047CF1A0A26EA0007883D /* Sound3.wav */,
-				F57047D01A0A26EA0007883D /* Sound4.wav */,
-				F57047D11A0A26EA0007883D /* Sound5.wav */,
-				F56FB85A19EACC110004F5BC /* VisualMusic-Info.plist */,
-				F56FB85B19EACC110004F5BC /* InfoPlist.strings */,
-				F56FB85E19EACC110004F5BC /* main.m */,
-				F56FB86019EACC110004F5BC /* VisualMusic-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F56FB87719EACC120004F5BC /* VisualMusicTests */ = {
-			isa = PBXGroup;
-			children = (
-				F56FB87D19EACC120004F5BC /* VisualMusicTests.m */,
-				F56FB87819EACC120004F5BC /* Supporting Files */,
-			);
-			path = VisualMusicTests;
-			sourceTree = "<group>";
-		};
-		F56FB87819EACC120004F5BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F56FB87919EACC120004F5BC /* VisualMusicTests-Info.plist */,
-				F56FB87A19EACC120004F5BC /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		F56FB84E19EACC110004F5BC /* VisualMusic */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F56FB88119EACC120004F5BC /* Build configuration list for PBXNativeTarget "VisualMusic" */;
-			buildPhases = (
-				F56FB84B19EACC110004F5BC /* Sources */,
-				F56FB84C19EACC110004F5BC /* Frameworks */,
-				F56FB84D19EACC110004F5BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VisualMusic;
-			productName = VisualMusic;
-			productReference = F56FB84F19EACC110004F5BC /* VisualMusic.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F56FB86F19EACC120004F5BC /* VisualMusicTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F56FB88419EACC120004F5BC /* Build configuration list for PBXNativeTarget "VisualMusicTests" */;
-			buildPhases = (
-				F56FB86C19EACC120004F5BC /* Sources */,
-				F56FB86D19EACC120004F5BC /* Frameworks */,
-				F56FB86E19EACC120004F5BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F56FB87619EACC120004F5BC /* PBXTargetDependency */,
-			);
-			name = VisualMusicTests;
-			productName = VisualMusicTests;
-			productReference = F56FB87019EACC120004F5BC /* VisualMusicTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		F56FB84719EACC110004F5BC /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "___FULLUSERNAME___";
-				TargetAttributes = {
-					F56FB86F19EACC120004F5BC = {
-						TestTargetID = F56FB84E19EACC110004F5BC;
-					};
-				};
-			};
-			buildConfigurationList = F56FB84A19EACC110004F5BC /* Build configuration list for PBXProject "VisualMusic" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = F56FB84619EACC110004F5BC;
-			productRefGroup = F56FB85019EACC110004F5BC /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				F56FB84E19EACC110004F5BC /* VisualMusic */,
-				F56FB86F19EACC120004F5BC /* VisualMusicTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		F56FB84D19EACC110004F5BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F56FB86B19EACC110004F5BC /* Images.xcassets in Resources */,
-				F56FB85D19EACC110004F5BC /* InfoPlist.strings in Resources */,
-				F56FB86619EACC110004F5BC /* Main.storyboard in Resources */,
-				F57047D71A0A26EA0007883D /* Sound5.wav in Resources */,
-				F57047D61A0A26EA0007883D /* Sound4.wav in Resources */,
-				F57047D41A0A26EA0007883D /* Sound2.wav in Resources */,
-				F57047D31A0A26EA0007883D /* Sound1.wav in Resources */,
-				F57047D51A0A26EA0007883D /* Sound3.wav in Resources */,
-				F57047D21A0A26EA0007883D /* Sound0.wav in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F56FB86E19EACC120004F5BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F56FB87C19EACC120004F5BC /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		F56FB84B19EACC110004F5BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F52AA61E19FD308200010E61 /* mainTabBarController.m in Sources */,
-				F56FB88919EFAB2E0004F5BC /* DrawViewController.m in Sources */,
-				F56FB86319EACC110004F5BC /* AppDelegate.m in Sources */,
-				F52AA61B19FD2B6000010E61 /* SettingsViewController.m in Sources */,
-				F56FB85F19EACC110004F5BC /* main.m in Sources */,
-				F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */,
-				F57047CB1A0A247C0007883D /* PlayViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F56FB86C19EACC120004F5BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F56FB87E19EACC120004F5BC /* VisualMusicTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F56FB87619EACC120004F5BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F56FB84E19EACC110004F5BC /* VisualMusic */;
-			targetProxy = F56FB87519EACC120004F5BC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F56FB85B19EACC110004F5BC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F56FB85C19EACC110004F5BC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F56FB86419EACC110004F5BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F56FB86519EACC110004F5BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F56FB87A19EACC120004F5BC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F56FB87B19EACC120004F5BC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		F56FB87F19EACC120004F5BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		F56FB88019EACC120004F5BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F56FB88219EACC120004F5BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VisualMusic/VisualMusic-Prefix.pch";
-				INFOPLIST_FILE = "VisualMusic/VisualMusic-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		F56FB88319EACC120004F5BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VisualMusic/VisualMusic-Prefix.pch";
-				INFOPLIST_FILE = "VisualMusic/VisualMusic-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		F56FB88519EACC120004F5BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VisualMusic.app/VisualMusic";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VisualMusic/VisualMusic-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "VisualMusicTests/VisualMusicTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F56FB88619EACC120004F5BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VisualMusic.app/VisualMusic";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VisualMusic/VisualMusic-Prefix.pch";
-				INFOPLIST_FILE = "VisualMusicTests/VisualMusicTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		F56FB84A19EACC110004F5BC /* Build configuration list for PBXProject "VisualMusic" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F56FB87F19EACC120004F5BC /* Debug */,
-				F56FB88019EACC120004F5BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F56FB88119EACC120004F5BC /* Build configuration list for PBXNativeTarget "VisualMusic" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F56FB88219EACC120004F5BC /* Debug */,
-				F56FB88319EACC120004F5BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F56FB88419EACC120004F5BC /* Build configuration list for PBXNativeTarget "VisualMusicTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F56FB88519EACC120004F5BC /* Debug */,
-				F56FB88619EACC120004F5BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = F56FB84719EACC110004F5BC /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>006652928AE26EA3DC1BE78F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>271FCD1AB08C4C9EC878FAB2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>006652928AE26EA3DC1BE78F</string>
+				<string>71C0F1D9A4AB917532965881</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>397F49FC9A8CDBE788FEC26B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>71C0F1D9A4AB917532965881</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>800009D0BED6544FD8171FB3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C772BC53F895B0CC70D49227</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>EB30BE1A99DDFE3BE163C2E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>397F49FC9A8CDBE788FEC26B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F52AA61919FD2B6000010E61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SettingsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F52AA61A19FD2B6000010E61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SettingsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F52AA61B19FD2B6000010E61</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F52AA61A19FD2B6000010E61</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F52AA61C19FD308200010E61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>mainTabBarController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F52AA61D19FD308200010E61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>mainTabBarController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F52AA61E19FD308200010E61</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F52AA61D19FD308200010E61</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB84619EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB85819EACC110004F5BC</string>
+				<string>F56FB87719EACC120004F5BC</string>
+				<string>F56FB85119EACC110004F5BC</string>
+				<string>F56FB85019EACC110004F5BC</string>
+				<string>271FCD1AB08C4C9EC878FAB2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB84719EACC110004F5BC</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>___FULLUSERNAME___</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>F56FB86F19EACC120004F5BC</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>F56FB84E19EACC110004F5BC</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>F56FB84A19EACC110004F5BC</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>F56FB84619EACC110004F5BC</string>
+			<key>productRefGroup</key>
+			<string>F56FB85019EACC110004F5BC</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>F56FB84E19EACC110004F5BC</string>
+				<string>F56FB86F19EACC120004F5BC</string>
+			</array>
+		</dict>
+		<key>F56FB84A19EACC110004F5BC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F56FB87F19EACC120004F5BC</string>
+				<string>F56FB88019EACC120004F5BC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F56FB84B19EACC110004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F52AA61E19FD308200010E61</string>
+				<string>F56FB88919EFAB2E0004F5BC</string>
+				<string>F56FB86319EACC110004F5BC</string>
+				<string>F52AA61B19FD2B6000010E61</string>
+				<string>F56FB85F19EACC110004F5BC</string>
+				<string>F56FB88C19EFAC220004F5BC</string>
+				<string>F57047CB1A0A247C0007883D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB84C19EACC110004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F57047D91A0A278C0007883D</string>
+				<string>F56FB85519EACC110004F5BC</string>
+				<string>F56FB85719EACC110004F5BC</string>
+				<string>F56FB85319EACC110004F5BC</string>
+				<string>EB30BE1A99DDFE3BE163C2E5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB84D19EACC110004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F56FB86B19EACC110004F5BC</string>
+				<string>F56FB85D19EACC110004F5BC</string>
+				<string>F56FB86619EACC110004F5BC</string>
+				<string>F57047D71A0A26EA0007883D</string>
+				<string>F57047D61A0A26EA0007883D</string>
+				<string>F57047D41A0A26EA0007883D</string>
+				<string>F57047D31A0A26EA0007883D</string>
+				<string>F57047D51A0A26EA0007883D</string>
+				<string>F57047D21A0A26EA0007883D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB84E19EACC110004F5BC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F56FB88119EACC120004F5BC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>800009D0BED6544FD8171FB3</string>
+				<string>F56FB84B19EACC110004F5BC</string>
+				<string>F56FB84C19EACC110004F5BC</string>
+				<string>F56FB84D19EACC110004F5BC</string>
+				<string>C772BC53F895B0CC70D49227</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VisualMusic</string>
+			<key>productName</key>
+			<string>VisualMusic</string>
+			<key>productReference</key>
+			<string>F56FB84F19EACC110004F5BC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>F56FB84F19EACC110004F5BC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VisualMusic.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F56FB85019EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB84F19EACC110004F5BC</string>
+				<string>F56FB87019EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85119EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F57047D81A0A278C0007883D</string>
+				<string>F56FB85219EACC110004F5BC</string>
+				<string>F56FB85419EACC110004F5BC</string>
+				<string>F56FB85619EACC110004F5BC</string>
+				<string>F56FB87119EACC120004F5BC</string>
+				<string>397F49FC9A8CDBE788FEC26B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85219EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F56FB85319EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85219EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB85419EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F56FB85519EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85419EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB85619EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F56FB85719EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85619EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB85819EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F52AA61919FD2B6000010E61</string>
+				<string>F52AA61A19FD2B6000010E61</string>
+				<string>F56FB88719EFAB2E0004F5BC</string>
+				<string>F56FB88819EFAB2E0004F5BC</string>
+				<string>F56FB86119EACC110004F5BC</string>
+				<string>F56FB86219EACC110004F5BC</string>
+				<string>F56FB86419EACC110004F5BC</string>
+				<string>F52AA61C19FD308200010E61</string>
+				<string>F52AA61D19FD308200010E61</string>
+				<string>F56FB88A19EFAC220004F5BC</string>
+				<string>F56FB88B19EFAC220004F5BC</string>
+				<string>F57047C91A0A247C0007883D</string>
+				<string>F57047CA1A0A247C0007883D</string>
+				<string>F56FB86A19EACC110004F5BC</string>
+				<string>F56FB85919EACC110004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>VisualMusic</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85919EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F57047CC1A0A26EA0007883D</string>
+				<string>F57047CD1A0A26EA0007883D</string>
+				<string>F57047CE1A0A26EA0007883D</string>
+				<string>F57047CF1A0A26EA0007883D</string>
+				<string>F57047D01A0A26EA0007883D</string>
+				<string>F57047D11A0A26EA0007883D</string>
+				<string>F56FB85A19EACC110004F5BC</string>
+				<string>F56FB85B19EACC110004F5BC</string>
+				<string>F56FB85E19EACC110004F5BC</string>
+				<string>F56FB86019EACC110004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85A19EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>VisualMusic-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85B19EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB85C19EACC110004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85C19EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85D19EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85B19EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB85E19EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB85F19EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85E19EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB86019EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VisualMusic-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86119EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86219EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86319EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB86219EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB86419EACC110004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB86519EACC110004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86519EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86619EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB86419EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB86A19EACC110004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB86B19EACC110004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB86A19EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB86C19EACC120004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F56FB87E19EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB86D19EACC120004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F56FB87219EACC120004F5BC</string>
+				<string>F56FB87419EACC120004F5BC</string>
+				<string>F56FB87319EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB86E19EACC120004F5BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F56FB87C19EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F56FB86F19EACC120004F5BC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F56FB88419EACC120004F5BC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F56FB86C19EACC120004F5BC</string>
+				<string>F56FB86D19EACC120004F5BC</string>
+				<string>F56FB86E19EACC120004F5BC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>F56FB87619EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VisualMusicTests</string>
+			<key>productName</key>
+			<string>VisualMusicTests</string>
+			<key>productReference</key>
+			<string>F56FB87019EACC120004F5BC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>F56FB87019EACC120004F5BC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VisualMusicTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F56FB87119EACC120004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F56FB87219EACC120004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB87119EACC120004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB87319EACC120004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85219EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB87419EACC120004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB85619EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB87519EACC120004F5BC</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>F56FB84719EACC110004F5BC</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F56FB84E19EACC110004F5BC</string>
+			<key>remoteInfo</key>
+			<string>VisualMusic</string>
+		</dict>
+		<key>F56FB87619EACC120004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>F56FB84E19EACC110004F5BC</string>
+			<key>targetProxy</key>
+			<string>F56FB87519EACC120004F5BC</string>
+		</dict>
+		<key>F56FB87719EACC120004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB87D19EACC120004F5BC</string>
+				<string>F56FB87819EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>VisualMusicTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87819EACC120004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB87919EACC120004F5BC</string>
+				<string>F56FB87A19EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87919EACC120004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>VisualMusicTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87A19EACC120004F5BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F56FB87B19EACC120004F5BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87B19EACC120004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87C19EACC120004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB87A19EACC120004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB87D19EACC120004F5BC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VisualMusicTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB87E19EACC120004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB87D19EACC120004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB87F19EACC120004F5BC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F56FB88019EACC120004F5BC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F56FB88119EACC120004F5BC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F56FB88219EACC120004F5BC</string>
+				<string>F56FB88319EACC120004F5BC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F56FB88219EACC120004F5BC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>006652928AE26EA3DC1BE78F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>VisualMusic/VisualMusic-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VisualMusic/VisualMusic-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F56FB88319EACC120004F5BC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>71C0F1D9A4AB917532965881</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>VisualMusic/VisualMusic-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VisualMusic/VisualMusic-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F56FB88419EACC120004F5BC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F56FB88519EACC120004F5BC</string>
+				<string>F56FB88619EACC120004F5BC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F56FB88519EACC120004F5BC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/VisualMusic.app/VisualMusic</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>VisualMusic/VisualMusic-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>VisualMusicTests/VisualMusicTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F56FB88619EACC120004F5BC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/VisualMusic.app/VisualMusic</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>VisualMusic/VisualMusic-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VisualMusicTests/VisualMusicTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F56FB88719EFAB2E0004F5BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DrawViewController.h</string>
+			<key>path</key>
+			<string>../DrawViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB88819EFAB2E0004F5BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DrawViewController.m</string>
+			<key>path</key>
+			<string>../DrawViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB88919EFAB2E0004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB88819EFAB2E0004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F56FB88A19EFAC220004F5BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DrawnItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB88B19EFAC220004F5BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DrawnItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F56FB88C19EFAC220004F5BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F56FB88B19EFAC220004F5BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047C91A0A247C0007883D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PlayViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047CA1A0A247C0007883D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PlayViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047CB1A0A247C0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047CA1A0A247C0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047CC1A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound0.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047CD1A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound1.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047CE1A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound2.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047CF1A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound3.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047D01A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound4.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047D11A0A26EA0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>path</key>
+			<string>Sound5.wav</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F57047D21A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047CC1A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D31A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047CD1A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D41A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047CE1A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D51A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047CF1A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D61A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047D01A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D71A0A26EA0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047D11A0A26EA0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F57047D81A0A278C0007883D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AudioToolbox.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AudioToolbox.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F57047D91A0A278C0007883D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F57047D81A0A278C0007883D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>F56FB84719EACC110004F5BC</string>
+</dict>
+</plist>
