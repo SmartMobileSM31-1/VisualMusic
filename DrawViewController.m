@@ -8,6 +8,7 @@
 
 #import "DrawViewController.h"
 #import <UIKit/UIKit.h>
+#import "PreferenceHandler.h"
 
 @interface DrawViewController ()
 
@@ -15,62 +16,8 @@
 
 @implementation DrawViewController
 
-DrawnItem *rotationBuffer;
-- (IBAction)chooseImage:(id)sender {
-    //Imagepicker openen om een afbeelding te kiezen
-    self.imagePicker = [[UIImagePickerController alloc ]init];
-    self.imagePicker.delegate = self;
-    [self.imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    [self presentViewController:self.imagePicker animated:YES completion:nil];
-    
-}
+//DrawnItem *rotationBuffer;
 
-//Als er een afbeelding gekozen is
--(void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    //Afbeelding weergeven
-    self.chosenImage = info[UIImagePickerControllerOriginalImage];
-    [self.imageView setImage:self.chosenImage];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-//Als afbeelding kiezen is geannuleerd
--(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (IBAction)saveImage:(id)sender {
-    UIGraphicsBeginImageContextWithOptions(_mainDrawnItem.bounds.size, NO,0.0);
-    [_mainDrawnItem.image drawInRect:CGRectMake(0, 0, _mainDrawnItem.frame.size.width, _mainDrawnItem.frame.size.height)];
-    UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
-}
-
-
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
-    if (error != NULL)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
-        [alert show];
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photoalbum"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
-        [alert show];
-    }
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -78,116 +25,39 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     // Do any additional setup after loading the view.
 }
 
-
-// effectively deprecated, as the app does not rotate
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    rotationBuffer = self.mainDrawnItem;
-    UIInterfaceOrientation to = toInterfaceOrientation;
-    UIInterfaceOrientation from = [[UIApplication sharedApplication] statusBarOrientation];
-    CGFloat angle = 0.0;
-    if(UIInterfaceOrientationIsLandscape(to))
-    {
-        if(UIInterfaceOrientationIsLandscape(from))
-        {
-            angle = -M_PI;
-        }
-        else if (UIInterfaceOrientationIsPortrait(from))
-        {
-            if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeLeft)
-               || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeRight))
-            {
-                angle = M_PI_2;
-            }
-            else if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeRight) || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeLeft))
-            {
-                angle = -M_PI_2;
-            }
-        }
-    }
-    if(UIInterfaceOrientationIsPortrait(to))
-    {
-        if(UIInterfaceOrientationIsLandscape(from))
-        {
-            if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeRight)
-               || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeLeft))
-            {
-                angle = M_PI_2;
-            }
-            else if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeLeft) || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeRight))
-            {
-                angle = -M_PI_2;
-            }
-        }
-        else if (UIInterfaceOrientationIsPortrait(from))
-        {
-            angle = M_PI;
-        }
-    }
-    
-    rotationBuffer.transform = CGAffineTransformMakeRotation(angle);
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    self.mainDrawnItem = rotationBuffer;
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-
+// Whenever view is selected, updates brush colors
 - (void)viewWillAppear:(BOOL)animated
 {
-
     [self setBrushColors];
 //    NSLog(@"went through viewWillAppear");
     [super viewWillAppear:animated];
-    
 }
 
--(float)getPreferenceValue :(NSString*)key
-{
-    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
-    float output = ((NSNumber*)[preferences objectForKey:key]).floatValue;
-    return output;
-}
-
+// loads color / brush / opacity values from user preferences
 -(void)getValues
 {
-    self.redValue = [self getPreferenceValue:@"redValue"];
-    self.greenValue = [self getPreferenceValue:@"greenValue"];
-    self.blueValue = [self getPreferenceValue:@"blueValue"];
-    self.brushValue = [self getPreferenceValue:@"brushValue"];
-    self.opacityValue = [self getPreferenceValue:@"opacityValue"];
-    NSLog(@"brushvalue drawview: %f", self.brushValue);
+    self.redValue = [PreferenceHandler getPreferenceValue:@"redValue"];
+    self.greenValue = [PreferenceHandler getPreferenceValue:@"greenValue"];
+    self.blueValue = [PreferenceHandler getPreferenceValue:@"blueValue"];
+    self.brushValue = [PreferenceHandler getPreferenceValue:@"brushValue"];
+    self.opacityValue = [PreferenceHandler getPreferenceValue:@"opacityValue"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+// New button - clears the entire screen, does not save
 - (IBAction)clearScreen:(UIButton *)sender
 {
     self.mainDrawnItem.image = nil;
 }
 
+// toggles the eraser function (white colors, brush / opacity unchanged)
 - (IBAction)erase:(UISwitch *)sender
 {
     [self setBrushColors];
 }
 
+// sets brush colors - white if eraser was toggled, loads from user settings otherwise
 - (void)setBrushColors
 {
     if(self.eraseSwitch.on)
@@ -202,7 +72,56 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 }
 
+// Load Image
+- (IBAction)chooseImage:(id)sender
+{
+    //Imagepicker openen om een afbeelding te kiezen
+    self.imagePicker = [[UIImagePickerController alloc ]init];
+    self.imagePicker.delegate = self;
+    [self.imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [self presentViewController:self.imagePicker animated:YES completion:nil];
+}
 
+// If an Image was selected
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //Afbeelding weergeven
+    self.chosenImage = info[UIImagePickerControllerOriginalImage];
+    [self.imageView setImage:self.chosenImage];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+// If selection was cancelled
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+// Saves image to gallery
+- (IBAction)saveImage:(id)sender
+{
+    UIGraphicsBeginImageContextWithOptions(_mainDrawnItem.bounds.size, NO,0.0);
+    [_mainDrawnItem.image drawInRect:CGRectMake(0, 0, _mainDrawnItem.frame.size.width, _mainDrawnItem.frame.size.height)];
+    UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+// finished saving Image
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != NULL)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photoalbum"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    }
+}
+
+// User started drawing
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
@@ -211,6 +130,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     self.lastPoint = [touch locationInView:self.view];
 }
 
+// User dragged his finger over the drawing screen
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 //    CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
@@ -236,6 +156,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     self.lastPoint = currentPoint;
 }
 
+// User is done drawing a line - line is saved from tempImage to mainImage
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
@@ -261,4 +182,62 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     self.tempDrawnItem.image = nil;
     UIGraphicsEndImageContext();
 }
+
+// effectively deprecated, as the app does not rotate
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+//{
+//    rotationBuffer = self.mainDrawnItem;
+//    UIInterfaceOrientation to = toInterfaceOrientation;
+//    UIInterfaceOrientation from = [[UIApplication sharedApplication] statusBarOrientation];
+//    CGFloat angle = 0.0;
+//    if(UIInterfaceOrientationIsLandscape(to))
+//    {
+//        if(UIInterfaceOrientationIsLandscape(from))
+//        {
+//            angle = -M_PI;
+//        }
+//        else if (UIInterfaceOrientationIsPortrait(from))
+//        {
+//            if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeLeft)
+//               || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeRight))
+//            {
+//                angle = M_PI_2;
+//            }
+//            else if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeRight) || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeLeft))
+//            {
+//                angle = -M_PI_2;
+//            }
+//        }
+//    }
+//    if(UIInterfaceOrientationIsPortrait(to))
+//    {
+//        if(UIInterfaceOrientationIsLandscape(from))
+//        {
+//            if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeRight)
+//               || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeLeft))
+//            {
+//                angle = M_PI_2;
+//            }
+//            else if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeLeft) || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeRight))
+//            {
+//                angle = -M_PI_2;
+//            }
+//        }
+//        else if (UIInterfaceOrientationIsPortrait(from))
+//        {
+//            angle = M_PI;
+//        }
+//    }
+//
+//    rotationBuffer.transform = CGAffineTransformMakeRotation(angle);
+//    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+//}
+//
+//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+//{
+//    self.mainDrawnItem = rotationBuffer;
+//    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+//}
+
+
 @end

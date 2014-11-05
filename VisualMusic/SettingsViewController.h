@@ -22,10 +22,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblOpacityValue;
 @property (strong, nonatomic) IBOutlet UILabel *lblBrushValue;
 
-- (IBAction)changeRed:(UISlider *)sender;
-- (IBAction)changeGreen:(UISlider *)sender;
-- (IBAction)changeBlue:(UISlider *)sender;
-- (IBAction)changeOpacity:(UISlider *)sender;
-- (IBAction)changeBrush:(UISlider *)sender;
+- (IBAction)changeSlider:(UISlider *)sender;
 
 @end
