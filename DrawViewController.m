@@ -88,7 +88,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     //Afbeelding weergeven
     self.chosenImage = info[UIImagePickerControllerOriginalImage];
-    [self.imageView setImage:self.chosenImage];
+    [self.mainDrawnItem setImage:self.chosenImage];
+    //[self.imageView setImage:self.chosenImage];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -182,62 +183,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     self.tempDrawnItem.image = nil;
     UIGraphicsEndImageContext();
 }
-
-// effectively deprecated, as the app does not rotate
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-//{
-//    rotationBuffer = self.mainDrawnItem;
-//    UIInterfaceOrientation to = toInterfaceOrientation;
-//    UIInterfaceOrientation from = [[UIApplication sharedApplication] statusBarOrientation];
-//    CGFloat angle = 0.0;
-//    if(UIInterfaceOrientationIsLandscape(to))
-//    {
-//        if(UIInterfaceOrientationIsLandscape(from))
-//        {
-//            angle = -M_PI;
-//        }
-//        else if (UIInterfaceOrientationIsPortrait(from))
-//        {
-//            if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeLeft)
-//               || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeRight))
-//            {
-//                angle = M_PI_2;
-//            }
-//            else if((from == UIInterfaceOrientationPortrait && to == UIInterfaceOrientationLandscapeRight) || (from == UIInterfaceOrientationPortraitUpsideDown && to == UIInterfaceOrientationLandscapeLeft))
-//            {
-//                angle = -M_PI_2;
-//            }
-//        }
-//    }
-//    if(UIInterfaceOrientationIsPortrait(to))
-//    {
-//        if(UIInterfaceOrientationIsLandscape(from))
-//        {
-//            if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeRight)
-//               || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeLeft))
-//            {
-//                angle = M_PI_2;
-//            }
-//            else if((to == UIInterfaceOrientationPortrait && from == UIInterfaceOrientationLandscapeLeft) || (to == UIInterfaceOrientationPortraitUpsideDown && from == UIInterfaceOrientationLandscapeRight))
-//            {
-//                angle = -M_PI_2;
-//            }
-//        }
-//        else if (UIInterfaceOrientationIsPortrait(from))
-//        {
-//            angle = M_PI;
-//        }
-//    }
-//
-//    rotationBuffer.transform = CGAffineTransformMakeRotation(angle);
-//    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-//}
-//
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-//{
-//    self.mainDrawnItem = rotationBuffer;
-//    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-//}
 
 
 @end
