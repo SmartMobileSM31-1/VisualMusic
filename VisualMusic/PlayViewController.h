@@ -25,7 +25,6 @@
 @property (strong, nonatomic) UIImage *chosenImage;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 
--(IBAction)showChoose;
 -(IBAction)showPlay;
 -(IBAction)playSound:(id)sender;
 

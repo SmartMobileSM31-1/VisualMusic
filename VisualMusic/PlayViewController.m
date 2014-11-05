@@ -7,6 +7,7 @@
 //
 
 #import "PlayViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface PlayViewController ()
 
@@ -32,14 +33,17 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     //Proberen de naam van het plaatje op te halen
     //Helaas zijn we hier niet uitgekomen, maar we hebben het geprobeerd
-    NSURL *imagePath = [info objectForKey:@"UIImagePickerControllerReferenceURL"];
-    NSString *imageName = [imagePath lastPathComponent];
-    NSLog(@"image name :%@",imageName);
-    NSLog(@"image filepath :%@",imagePath);
-    NSLog(@"image filepath :%@",self.chosenImage.accessibilityIdentifier);
+    NSURL *refURL = [info valueForKey:UIImagePickerControllerReferenceURL];
     
-    [self changeImageTitle:@"Now Playing:"];
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *imageAsset)
+    {
+        ALAssetRepresentation *imageRep = [imageAsset defaultRepresentation];
+        NSLog(@"[imageRep filename] : %@",[imageRep filename]);
+        [self changeImageTitle:[imageRep filename]];
+    };
     
+    ALAssetsLibrary *assetslibrary = [[ALAssetsLibrary alloc]init];
+    [assetslibrary assetForURL:refURL resultBlock:resultblock failureBlock:nil];
 }
 
 //Als afbeelding kiezen is geannuleerd
@@ -56,14 +60,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     AudioServicesPlaySystemSound(playSoundID0);
     sleep(1);
     AudioServicesPlaySystemSound(playSoundID1);
-    sleep(1);
+    sleep(1);/*
     AudioServicesPlaySystemSound(playSoundID2);
     sleep(1);
     AudioServicesPlaySystemSound(playSoundID3);
     sleep(1);
     AudioServicesPlaySystemSound(playSoundID4);
     sleep(1);
-    AudioServicesPlaySystemSound(playSoundID5);
+    AudioServicesPlaySystemSound(playSoundID5);*/
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -75,17 +79,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     return self;
 }
 
-//Bepalen of de knop afbeelding kiezen moet worden weergegeven
--(IBAction)showChoose{
-    if([playSound.currentTitle isEqual:@"Play"])
-    {
-        chooseImage.hidden=NO;
-    }
-    else
-    {
-        chooseImage.hidden=YES;
-    }
-}
 
 //Bepalen of de knop play worden weergegeven
 -(IBAction)showPlay{
@@ -122,15 +115,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
