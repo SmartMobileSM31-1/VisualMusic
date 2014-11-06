@@ -28,12 +28,15 @@
 		F56FB88C19EFAC220004F5BC /* DrawnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56FB88B19EFAC220004F5BC /* DrawnItem.m */; };
 		F57047CB1A0A247C0007883D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57047CA1A0A247C0007883D /* PlayViewController.m */; };
 		F57047D21A0A26EA0007883D /* Sound0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CC1A0A26EA0007883D /* Sound0.wav */; };
-		F57047D31A0A26EA0007883D /* Sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CD1A0A26EA0007883D /* Sound1.wav */; };
-		F57047D41A0A26EA0007883D /* Sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CE1A0A26EA0007883D /* Sound2.wav */; };
-		F57047D51A0A26EA0007883D /* Sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047CF1A0A26EA0007883D /* Sound3.wav */; };
-		F57047D61A0A26EA0007883D /* Sound4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D01A0A26EA0007883D /* Sound4.wav */; };
-		F57047D71A0A26EA0007883D /* Sound5.wav in Resources */ = {isa = PBXBuildFile; fileRef = F57047D11A0A26EA0007883D /* Sound5.wav */; };
 		F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57047D81A0A278C0007883D /* AudioToolbox.framework */; };
+		F57047DB1A0A876A0007883D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57047DA1A0A876A0007883D /* AVFoundation.framework */; };
+		F57047FD1A0AAEE00007883D /* Beep0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047F61A0AAEE00007883D /* Beep0.mp3 */; };
+		F57047FE1A0AAEE00007883D /* Beep1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047F71A0AAEE00007883D /* Beep1.mp3 */; };
+		F57047FF1A0AAEE00007883D /* Beep2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047F81A0AAEE00007883D /* Beep2.mp3 */; };
+		F57048001A0AAEE00007883D /* Beep3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047F91A0AAEE00007883D /* Beep3.mp3 */; };
+		F57048011A0AAEE00007883D /* Beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047FA1A0AAEE00007883D /* Beep4.mp3 */; };
+		F57048021A0AAEE00007883D /* Beep5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047FB1A0AAEE00007883D /* Beep5.mp3 */; };
+		F57048031A0AAEE00007883D /* Beep6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F57047FC1A0AAEE00007883D /* Beep6.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +83,15 @@
 		F57047C91A0A247C0007883D /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		F57047CA1A0A247C0007883D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		F57047CC1A0A26EA0007883D /* Sound0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound0.wav; sourceTree = "<group>"; };
-		F57047CD1A0A26EA0007883D /* Sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound1.wav; sourceTree = "<group>"; };
-		F57047CE1A0A26EA0007883D /* Sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound2.wav; sourceTree = "<group>"; };
-		F57047CF1A0A26EA0007883D /* Sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound3.wav; sourceTree = "<group>"; };
-		F57047D01A0A26EA0007883D /* Sound4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound4.wav; sourceTree = "<group>"; };
-		F57047D11A0A26EA0007883D /* Sound5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound5.wav; sourceTree = "<group>"; };
 		F57047D81A0A278C0007883D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F57047DA1A0A876A0007883D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F57047F61A0AAEE00007883D /* Beep0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep0.mp3; sourceTree = "<group>"; };
+		F57047F71A0AAEE00007883D /* Beep1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep1.mp3; sourceTree = "<group>"; };
+		F57047F81A0AAEE00007883D /* Beep2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep2.mp3; sourceTree = "<group>"; };
+		F57047F91A0AAEE00007883D /* Beep3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep3.mp3; sourceTree = "<group>"; };
+		F57047FA1A0AAEE00007883D /* Beep4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep4.mp3; sourceTree = "<group>"; };
+		F57047FB1A0AAEE00007883D /* Beep5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep5.mp3; sourceTree = "<group>"; };
+		F57047FC1A0AAEE00007883D /* Beep6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beep6.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57047DB1A0A876A0007883D /* AVFoundation.framework in Frameworks */,
 				F57047D91A0A278C0007883D /* AudioToolbox.framework in Frameworks */,
 				F56FB85519EACC110004F5BC /* CoreGraphics.framework in Frameworks */,
 				F56FB85719EACC110004F5BC /* UIKit.framework in Frameworks */,
@@ -174,6 +181,7 @@
 		F56FB85119EACC110004F5BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F57047DA1A0A876A0007883D /* AVFoundation.framework */,
 				F57047D81A0A278C0007883D /* AudioToolbox.framework */,
 				F56FB85219EACC110004F5BC /* Foundation.framework */,
 				F56FB85419EACC110004F5BC /* CoreGraphics.framework */,
@@ -199,12 +207,14 @@
 		F56FB85919EACC110004F5BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F57047F61A0AAEE00007883D /* Beep0.mp3 */,
+				F57047F71A0AAEE00007883D /* Beep1.mp3 */,
+				F57047F81A0AAEE00007883D /* Beep2.mp3 */,
+				F57047F91A0AAEE00007883D /* Beep3.mp3 */,
+				F57047FA1A0AAEE00007883D /* Beep4.mp3 */,
+				F57047FB1A0AAEE00007883D /* Beep5.mp3 */,
+				F57047FC1A0AAEE00007883D /* Beep6.mp3 */,
 				F57047CC1A0A26EA0007883D /* Sound0.wav */,
-				F57047CD1A0A26EA0007883D /* Sound1.wav */,
-				F57047CE1A0A26EA0007883D /* Sound2.wav */,
-				F57047CF1A0A26EA0007883D /* Sound3.wav */,
-				F57047D01A0A26EA0007883D /* Sound4.wav */,
-				F57047D11A0A26EA0007883D /* Sound5.wav */,
 				F56FB85A19EACC110004F5BC /* VisualMusic-Info.plist */,
 				F56FB85B19EACC110004F5BC /* InfoPlist.strings */,
 				F56FB85E19EACC110004F5BC /* main.m */,
@@ -311,13 +321,15 @@
 			files = (
 				F56FB86B19EACC110004F5BC /* Images.xcassets in Resources */,
 				F56FB85D19EACC110004F5BC /* InfoPlist.strings in Resources */,
+				F57047FF1A0AAEE00007883D /* Beep2.mp3 in Resources */,
 				F56FB86619EACC110004F5BC /* Main.storyboard in Resources */,
-				F57047D71A0A26EA0007883D /* Sound5.wav in Resources */,
-				F57047D61A0A26EA0007883D /* Sound4.wav in Resources */,
-				F57047D41A0A26EA0007883D /* Sound2.wav in Resources */,
-				F57047D31A0A26EA0007883D /* Sound1.wav in Resources */,
-				F57047D51A0A26EA0007883D /* Sound3.wav in Resources */,
+				F57048011A0AAEE00007883D /* Beep4.mp3 in Resources */,
+				F57047FE1A0AAEE00007883D /* Beep1.mp3 in Resources */,
+				F57048031A0AAEE00007883D /* Beep6.mp3 in Resources */,
+				F57047FD1A0AAEE00007883D /* Beep0.mp3 in Resources */,
+				F57048021A0AAEE00007883D /* Beep5.mp3 in Resources */,
 				F57047D21A0A26EA0007883D /* Sound0.wav in Resources */,
+				F57048001A0AAEE00007883D /* Beep3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface PlayViewController: UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
+    AVAudioPlayer *playSound0;
+    AVAudioPlayer *playSound1;
+    AVAudioPlayer *playSound2;
+    AVAudioPlayer *playSound3;
+    AVAudioPlayer *playSound4;
+    AVAudioPlayer *playSound5;
+    AVAudioPlayer *playSound6;
+    AVAudioPlayer *playSound7;
     IBOutlet UIButton *chooseImage;
     IBOutlet UIButton *playSound;
     IBOutlet UILabel *titelImage;
-    SystemSoundID playSoundID0;
-    SystemSoundID playSoundID1;
-    SystemSoundID playSoundID2;
-    SystemSoundID playSoundID3;
-    SystemSoundID playSoundID4;
-    SystemSoundID playSoundID5;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIImage *chosenImage;
